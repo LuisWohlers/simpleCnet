@@ -6,7 +6,7 @@ A simple network with 3 layers of neurons with 8 input and 4 output neurons, sig
 and an output of either 0 or 1 in the output neurons (THRESHOLD_OUT as output funcion in the output layer) is created like this:
 
 	int neuronsPerLayer[3]= { 8,6,4 };
-		network = GENERATE_NETWORK(3, neuronsPerLayer, SIGMOID, SIGMOID, IDENTITY, THRESHOLD_OUT);
+	NEURAL_NETWORK*network = GENERATE_NETWORK(3, neuronsPerLayer, SIGMOID, SIGMOID, IDENTITY, THRESHOLD_OUT);
   
  A simple number of training patterns can then be specified:
  
