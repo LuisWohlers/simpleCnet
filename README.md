@@ -10,7 +10,7 @@ int neuronsPerLayer[3]= { 8,6,4 };
   
  A simple number of training patterns can then be specified:
  
- double in1[8] = { 0,0,0,0,0,0,0,1 };
+double in1[8] = { 0,0,0,0,0,0,0,1 };
 	double in2[8] = { 0,0,0,0,0,0,1,1 };
 	double in3[8] = { 0,0,0,0,0,1,1,1 };
 	double in4[8] = { 0,0,0,0,1,1,1,1 };
