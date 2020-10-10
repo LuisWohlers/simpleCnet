@@ -47,6 +47,7 @@ int neuronsPerLayer[3]= { 8,6,4 };
   
   With
   
+  double* outtest;
   outtest = GENERATE_OUTPUT(network, in1);
 	printf(" %.0f %.0f %.0f %.0f\n ", outtest[0], outtest[1], outtest[2], outtest[3]);
   
