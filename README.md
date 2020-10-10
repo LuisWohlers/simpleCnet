@@ -1,6 +1,6 @@
 # simpleCnet
 A simple single-header header-only "library" for neural networks written in C (C89). 
-Training is done using backpropagation.
+Training is accomplished using backpropagation.
 
 A simple network with 3 layers of neurons with 8 input and 4 output neurons, sigmoid activation functions in each layer
 and an output of either 0 or 1 in the output neurons (THRESHOLD_OUT as output funcion in the output layer) is created like this:
