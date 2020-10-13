@@ -269,6 +269,51 @@ void MATRIX_PRINTONCONSOLE(WEIGHING_MATRIX matrix) {
 	printf("\n");
 }
 
+INT MATRIX_SAVETOFILE(WEIGHING_MATRIX matrix, const char* outfilename, const char* precision) {
+	/*saves the weighing matrix to a text file*/
+	INT i, j;
+	FILE* outfile;
+
+	outfile = fopen(outfilename, "w");
+	if (outfile == NULL) {
+		perror("output file error");
+		return 0;
+	}
+
+	for (i = 0; i < matrix._rows; i++) {
+		for (j = 0; j < matrix._columns; j++) {
+			/*At %.Xf define needed precision in text file*/
+			fprintf(outfile, precision , matrix._matrix[i][j]);
+		}
+		fprintf(outfile, "\n");
+	}
+	fclose(outfile);
+
+	return 1;
+}
+
+INT MATRIX_READFROMFILE(WEIGHING_MATRIX matrix, const char* infilename) {
+	INT i, j;
+	FILE* infile;
+	DOUBLE read;
+
+	infile = fopen(infilename, "r");
+	if (infile == NULL) {
+		perror("input file error");
+		return 0;
+	}
+	
+	for (i = 0; i < matrix._rows; i++) {
+		for (j = 0; j < matrix._columns; j++) {
+			/*At %.Xf define needed precision in text file*/
+			fscanf(infile, "%lf ", &read);
+			matrix._matrix[i][j] = read;
+		}
+	}
+	fclose(infile);
+	return 1;
+}
+
 /*void WEIGHING_MATRIX_free(WEIGHING_MATRIX* weMa) {
 	for (INT i = 0; i < weMa->_rows; i++) {
 		free(weMa->_matrix[i]);
