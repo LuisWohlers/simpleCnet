@@ -53,7 +53,17 @@ and an output of either 0 or 1 in the output neurons (THRESHOLD_OUT as output fu
   
   it can be checked if the network now recognizes the training samples correctly.
   
+  Save the network's weighing matrix to a text file as follows:
+  
+  	INT saved = MATRIX_SAVETOFILE(network->_weighingmatrix, "weighingmatrix.txt","%.20f");
+	
+"saved" is 0 if unsuccessful, 1 otherwise.
+  
+  
+  
   (Note: this example is not a real use-case of a neural network, but it can be used to test and see how it performs)
+  
+
   
  
  
