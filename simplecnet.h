@@ -397,7 +397,6 @@ NEURAL_NETWORK* GENERATE_NETWORK(INT numberOfLayers, INT* neuronsPerLayer, void 
 
 	INT a, b, c, x, y;
 	INT layer, pl;
-	INT counthier;
 	INT x2, y2;
 
 	INT index = 0;
